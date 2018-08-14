@@ -1,0 +1,79 @@
+$hederHeight: 50px;
+$headerColor: rgb(75, 0, 44);
+.header {
+    display: flex;
+    flex-direction: row;
+    height: $hederHeight;
+    width: 100%;
+    background-color: $headerColor;
+    padding: 0px;
+};
+
+.header__app__name__container {
+    border-right: 1px solid white;
+    width: 250px;
+    height: $hederHeight;
+}
+.app__name {
+    color: aliceblue;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    margin-left: 15px;
+    padding-top: 13px;
+}
+
+.setings__container {
+    cursor: pointer;
+    height: $hederHeight;
+    width: 46px;   
+    margin-left: auto;
+    margin-right: 0;
+
+    .setings__image {
+        cursor: pointer;
+        margin-left: 7px;
+        margin-top: 20%;
+    }
+}
+
+.setings__container:hover {
+    background-color: $headerColor + 20;
+   
+};
+.user__info__container {
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: $hederHeight;
+    align-self: flex-end;
+    width: 200px;
+
+    .user__name {
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        color: aliceblue;
+        font-size: 14px;
+        margin-left: 10px;
+        margin-right: 5px;
+        margin-top: 7px;
+
+        .user__base__snetwork {
+            margin-top: 3px;
+        }
+    }
+
+    .user__image {
+        margin-top: 2px;
+        margin-right: 5px;
+        background-color: azure;
+        width: 40px;
+        height: 40px;
+        border-radius: 50px;
+    }
+}
+
+.user__info__container:hover {
+    background-color: $headerColor + 20;
+}

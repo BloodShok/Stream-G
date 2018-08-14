@@ -1,0 +1,22 @@
+<div class="header" >
+    <div class="header__app__name__container">
+        <div class="app__name">Social Manager</div>
+    </div>
+    <div class="setings__container" [matMenuTriggerFor]="menu">
+        <img class="setings__image" src="../../../assets/settings.png" />
+    </div>
+    <div class="user__info__container">
+        <div class="user__name">
+            <span class="user__name__text">Palii Ivan Vitalievici</span>
+            <span class="user__base__snetwork">Vkontacte</span>
+        </div>
+        <div class="user__image" style="background-image: url('../../../assets/my-img.jpg')">
+            
+        </div>
+    </div>
+</div>
+
+<mat-menu #menu="matMenu"  yPosition="below" [overlapTrigger]="false" >
+  <button mat-menu-item style="width: 200px;">Item 1</button>
+  <button mat-menu-item>Item 2</button>
+</mat-menu>
