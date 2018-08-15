@@ -1,2 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+body {
+    background-color: rgb(243, 243, 243);
+}
+.thema__VK {
+    background-color: #4A76A8;
+}
+
+.thema__FB {
+    background-color: #4267B2;
+}
+
+.thema__TW {
+    background-color: #4AB3F4;
+}
+
+.thema__VK--active {
+    background-color: #4A76A8 + 15;
+}
+
+.thema__FB--active {
+    background-color: #4267B2 + 15;
+}
+
+.thema__TW--active {
+    background-color: #4AB3F4 + 15;
+}

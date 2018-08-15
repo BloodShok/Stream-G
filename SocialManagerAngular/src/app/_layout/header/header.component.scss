@@ -1,11 +1,11 @@
 $hederHeight: 50px;
-$headerColor: rgb(75, 0, 44);
 .header {
+    position: static;
     display: flex;
     flex-direction: row;
     height: $hederHeight;
     width: 100%;
-    background-color: $headerColor;
+   // background-color: $headerColor;
     padding: 0px;
 };
 
@@ -36,10 +36,6 @@ $headerColor: rgb(75, 0, 44);
     }
 }
 
-.setings__container:hover {
-    background-color: $headerColor + 20;
-   
-};
 .user__info__container {
     cursor: pointer;
     display: flex;
@@ -59,7 +55,7 @@ $headerColor: rgb(75, 0, 44);
         margin-right: 5px;
         margin-top: 7px;
 
-        .user__base__snetwork {
+        .user__login__snetwork {
             margin-top: 3px;
         }
     }
@@ -74,6 +70,6 @@ $headerColor: rgb(75, 0, 44);
     }
 }
 
-.user__info__container:hover {
-    background-color: $headerColor + 20;
+.menu__width {
+    width: 245px;
 }
