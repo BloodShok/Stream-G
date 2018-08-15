@@ -9,6 +9,8 @@ import { AngularMatrialModule } from './angular-matrial/angular.matrial.module';
 import { UserSetingsComponent } from './components/user-setings/user-setings.component';
 import { ClickOutsideModule } from 'ng-click-outside';
 import { LoginComponent } from './pages/login/login.component';
+import { RouterModule } from '@angular/router';
+import { AppRouteModule } from './app-route.module';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { LoginComponent } from './pages/login/login.component';
     BrowserModule,
     BrowserAnimationsModule,
     AngularMatrialModule,
-    ClickOutsideModule
+    ClickOutsideModule,
+    AppRouteModule
   ],
   providers: [],
   bootstrap: [AppComponent]
