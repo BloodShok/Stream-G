@@ -10,7 +10,10 @@ import { UserSetingsComponent } from './components/user-setings/user-setings.com
 import { ClickOutsideModule } from 'ng-click-outside';
 import { LoginComponent } from './pages/login/login.component';
 import { RouterModule } from '@angular/router';
-import { AppRouteModule } from './app-route.module';
+import { AppRouteModule } from './routes/app-route.module';
+import { LayoutDefenitionComponent } from './_layout/layout-defenition/layout-defenition.component';
+import { NewsComponent } from './pages/news/news.component';
+import { MessagesComponent } from './pages/messages/messages.component';
 
 
 @NgModule({
@@ -20,6 +23,9 @@ import { AppRouteModule } from './app-route.module';
     SideBarComponent,
     UserSetingsComponent,
     LoginComponent,
+    LayoutDefenitionComponent,
+    NewsComponent,
+    MessagesComponent
   ],
   imports: [
     BrowserModule,

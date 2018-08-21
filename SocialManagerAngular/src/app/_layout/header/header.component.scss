@@ -1,11 +1,14 @@
+:host {
+    z-index: 1;
+}
 $hederHeight: 50px;
 .header {
     position: static;
     display: flex;
+    justify-content: space-between;
     flex-direction: row;
     height: $hederHeight;
     width: 100%;
-   // background-color: $headerColor;
     padding: 0px;
 };
 
@@ -22,19 +25,6 @@ $hederHeight: 50px;
     padding-top: 13px;
 }
 
-.setings__container {
-    cursor: pointer;
-    height: $hederHeight;
-    width: 46px;   
-    margin-left: auto;
-    margin-right: 0;
-
-    .setings__image {
-        cursor: pointer;
-        margin-left: 7px;
-        margin-top: 20%;
-    }
-}
 
 .user__info__container {
     cursor: pointer;

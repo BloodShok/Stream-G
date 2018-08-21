@@ -9,32 +9,38 @@ export class HeaderComponent implements OnInit {
   readonly app_setings = 'app-setings';
   readonly user_setings = 'user-setings';
 
-  currentWindow: string;
+  currentWindowAppSetings: string;
+  currentWindowUserSetings: string;
   constructor() { }
 
   ngOnInit() {
   }
 
   selectdAppSetings() {
-    this.currentWindow = this.app_setings;
-    console.log(this.currentWindow);
+    this.currentWindowAppSetings = this.app_setings;
   }
 
   selectdUserSetings(val: any) {
-    this.currentWindow = this.user_setings;
-    console.log(val.class);
+    this.currentWindowUserSetings = this.user_setings;
   }
   unSelectedUserSetings(e: any) {
     const classNames: any[] = e.path;
-    if (!classNames.some(x => x.className === 'container__item')) {
-      this.currentWindow = null;
+    if (!classNames.some(x => {
+      if (x.className == null) {
+         return false;
+        } else {
+        return x.className.includes('user-setings-container');
+      }
+    })) {
+      this.currentWindowUserSetings = null;
     }
   }
+
   public get isSelectedAppSetings(): boolean {
-    return this.currentWindow === this.app_setings;
+    return this.currentWindowAppSetings === this.app_setings;
   }
 
   public get isSelectedUserSetings(): boolean {
-    return this.currentWindow === this.user_setings;
+    return this.currentWindowUserSetings === this.user_setings;
   }
 }

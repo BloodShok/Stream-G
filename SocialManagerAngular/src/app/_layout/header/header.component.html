@@ -2,20 +2,19 @@
     <div class="header__app__name__container">
         <div class="app__name">Social Manager</div>
     </div>
-    <div class="setings__container" (click)="selectdAppSetings()">
-        <img class="setings__image" src="../../../assets/settings.png" />
-    </div>
+    
     <div class="user__info__container" #usertarget (click)="selectdUserSetings(usertarget)" (clickOutside)="unSelectedUserSetings($event)">
         <div class="user__name">
             <span class="user__name__text">Palii Ivan Vitalievici</span>
             <span class="user__login__snetwork">Vkontakte</span>
         </div>
-        <div class="user__image" style="background-image: url('../../../assets/my-img.jpg')">
+            <div class="user__image" style="background-image: url('../../../assets/my-img.jpg')">
         </div>  
     </div>
 </div>
 
-
-<div style="position: static; float: right;">
+<div style="float: right;">
     <app-user-setings *ngIf="isSelectedUserSetings"></app-user-setings>
 </div>
+
+
