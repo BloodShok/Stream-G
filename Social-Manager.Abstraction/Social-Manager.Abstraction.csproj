@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>Social_Manager.Infrastructure</RootNamespace>
+    <RootNamespace>Social_Manager.Abstraction</RootNamespace>
   </PropertyGroup>
 
 </Project>
