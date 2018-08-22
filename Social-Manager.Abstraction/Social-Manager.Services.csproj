@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>Social_Manager.Abstraction</RootNamespace>
+    <RootNamespace>Social-Manager.Services</RootNamespace>
   </PropertyGroup>
 
 </Project>

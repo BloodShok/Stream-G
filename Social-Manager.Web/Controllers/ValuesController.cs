@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using Social_Manager.Core.DataBaseConfig;
 
 namespace Social_Manager.Web.Controllers
 {
@@ -10,11 +11,16 @@ namespace Social_Manager.Web.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
+        private readonly SocialManagerContext _context;
+        public ValuesController(SocialManagerContext context)
+        {
+            _context = context;
+        }
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public IActionResult Get()
         {
-            return new string[] { "value1", "value2" };
+            return Ok(_context.Users.ToList());
         }
 
         // GET api/values/5
