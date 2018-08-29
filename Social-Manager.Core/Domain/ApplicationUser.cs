@@ -6,9 +6,7 @@ using Microsoft.AspNetCore.Identity;
 
 namespace Social_Manager.Core.Domain
 {
-    public class User : IdentityUser<int>, IBaseEntity
+    public class ApplicationUser : IdentityUser<int>, IBaseEntity
     {
-        public string Name { get; set; }
-        public string Surname { get; set; }
     }
 }

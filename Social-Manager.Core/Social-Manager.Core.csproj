@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Social-Manager.Abstraction\Social-Manager.Abstraction.csproj" />
+    <ProjectReference Include="..\Social-Manager.Abstraction\Social-Manager.Services.csproj" />
   </ItemGroup>
 
 </Project>

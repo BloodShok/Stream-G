@@ -13,7 +13,7 @@ namespace Social_Manager.Core.DataBaseConfig
             Database.EnsureCreated();
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<ApplicationUser> Users { get; set; }
 
     }
 }

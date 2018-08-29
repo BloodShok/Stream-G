@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Social_Manager.Core.DataBaseConfig;
+using Social_Manager.Core.Domain;
 
 namespace Social_Manager.Web.Controllers
 {
@@ -11,16 +13,19 @@ namespace Social_Manager.Web.Controllers
     [ApiController]
     public class ValuesController : ControllerBase
     {
-        private readonly SocialManagerContext _context;
-        public ValuesController(SocialManagerContext context)
+        
+        UserManager<ApplicationUser> _userManager;
+
+        public ValuesController(UserManager<ApplicationUser> userManager)
         {
-            _context = context;
+            _userManager = userManager;
         }
         // GET api/values
         [HttpGet]
-        public IActionResult Get()
+        public   IActionResult Get()
         {
-            return Ok(_context.Users.ToList());
+           
+            return Ok("Ok");
         }
 
         // GET api/values/5
