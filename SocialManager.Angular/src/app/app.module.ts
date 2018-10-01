@@ -14,7 +14,10 @@ import { AppRouteModule } from './routes/app-route.module';
 import { LayoutDefenitionComponent } from './_layout/layout-defenition/layout-defenition.component';
 import { NewsComponent } from './pages/news/news.component';
 import { MessagesComponent } from './pages/messages/messages.component';
-
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import {AdalService, AdalInterceptor} from 'adal-angular4';
+import { AuthService } from './services/auth.service';
+import { AuthorizationGuard } from './guards/auth-guard';
 
 @NgModule({
   declarations: [
@@ -32,9 +35,19 @@ import { MessagesComponent } from './pages/messages/messages.component';
     BrowserAnimationsModule,
     AngularMatrialModule,
     ClickOutsideModule,
-    AppRouteModule
+    AppRouteModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    AdalService,
+     AuthService,
+     AuthorizationGuard,
+     {
+       provide: HTTP_INTERCEPTORS,
+       useClass: AdalInterceptor,
+       multi: true
+     }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

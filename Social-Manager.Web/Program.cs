@@ -8,7 +8,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 
-namespace Social_Manager.Web
+namespace Social_Manager.WEB
 {
     public class Program
     {

@@ -2,34 +2,32 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Authorization;
 
-namespace Social_Manager.Web.Controllers
+namespace Social_Manager.WEB.Controllers
 {
-    [Route("auth")]
+    [Route("Auth")]
     public class AuthController : Controller
     {
-        private readonly IAuthenticationSchemeProvider _authenticationSchemeProvider;
-        public AuthController(IAuthenticationSchemeProvider authenticationSchemeProvider)
+        IAuthorizationService _service;
+        public AuthController(IAuthorizationService authorizationService)
         {
-            _authenticationSchemeProvider = authenticationSchemeProvider;
+            _service = authorizationService;
         }
-        [Route("data")]
-        public async Task<IActionResult> Data()
+       
+        [Route("index")]
+        public IActionResult Index()
         {
-            var data = (await _authenticationSchemeProvider.GetAllSchemesAsync()).Select(n => n.DisplayName);
-
-            return Ok(data);
+            return View();
         }
 
-        [Route("signin")]
-        public IActionResult SignIn()
+        [Authorize]
+        [Route("AuthData")]
+        public IActionResult AuthData()
         {
-           
-            var sd = Challenge(new AuthenticationProperties { RedirectUri = "/api/values" }, "Google");
-            return sd;
+            return Ok("Ok res");
         }
     }
 }

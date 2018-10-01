@@ -1,23 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Net;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.AzureADB2C.UI;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using Social_Manager.Core.DataBaseConfig;
-using Social_Manager.Core.Domain;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
 
-namespace Social_Manager.Web
+namespace Social_Manager.WEB
 {
     public class Startup
     {
@@ -28,34 +26,27 @@ namespace Social_Manager.Web
 
         public IConfiguration Configuration { get; }
 
-        
+        // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            string ConnectionString = Configuration.GetConnectionString("DefaultConnection");
-            services.AddDbContext<SocialManagerContext>(opt => opt.UseSqlServer(ConnectionString));
+            services.AddAuthentication(options =>
+            {
+                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+               .AddJwtBearer(jwtOptions =>
+               {
+                   jwtOptions.Authority = $"https://login.microsoftonline.com/tfp/{Configuration["AzureAdB2C:Tenant"]}/{Configuration["AzureAdB2C:Policy"]}/v2.0/";
+                   jwtOptions.Audience = Configuration["AzureAdB2C:ClientId"];
+                   jwtOptions.Events = new JwtBearerEvents
+                   {
+                       OnAuthenticationFailed = AuthenticationFailed
+                   };
+               });
+
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            services.AddIdentity<ApplicationUser, ApplicationRole>()
-                .AddEntityFrameworkStores<SocialManagerContext>()
-                .AddDefaultTokenProviders();
-
-            services.AddAuthentication().AddFacebook(fOptions =>
-            {
-                fOptions.AppId = "313637266079322";
-                fOptions.AppSecret = "d0d3581de60f0fc71aa3e8f0af4b858a";
-                fOptions.TokenEndpoint = "token-facebook";
-            })
-            .AddGoogle(gOptions =>
-            {
-                gOptions.ClientId = "811582334600-nomcfrcmrrb0vc7k5bc8g78cgmp3fhrt.apps.googleusercontent.com";
-                gOptions.ClientSecret = "tNZMHdyB7tASWTRJ4HSBYI5c";
-                gOptions.TokenEndpoint = "/token-google";
-            })
-            .AddJwtBearer();
-
         }
 
-
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
             if (env.IsDevelopment())
@@ -66,10 +57,19 @@ namespace Social_Manager.Web
             {
                 app.UseHsts();
             }
+
             app.UseHttpsRedirection();
-           // app.UseCookiePolicy();
             app.UseAuthentication();
             app.UseMvc();
+        }
+
+        private Task AuthenticationFailed(AuthenticationFailedContext arg)
+        {
+            // For debugging purposes only!
+            var s = $"AuthenticationFailed: {arg.Exception.Message}";
+            arg.Response.ContentLength = s.Length;
+            arg.Response.Body.Write(Encoding.UTF8.GetBytes(s), 0, s.Length);
+            return Task.FromResult(0);
         }
     }
 }
