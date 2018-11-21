@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Social_Manager.Core.Interfaces
+namespace StreamG.Core.Domain
 {
     interface IRepository<TEntity> where TEntity: IBaseEntity
     {

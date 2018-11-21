@@ -23,10 +23,10 @@ namespace Social_Manager.WEB.Controllers
             return View();
         }
 
-        [Authorize]
         [Route("AuthData")]
-        public IActionResult AuthData()
+        public IActionResult AuthData(string code)
         {
+
             return Ok("Ok res");
         }
     }

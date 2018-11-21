@@ -1,19 +1,19 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Social_Manager.Core.Domain;
+using StreamG.Core.Domain;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Social_Manager.Core.DataBaseConfig
+namespace StreamG.Core.DataBaseConfig
 {
-    public class SocialManagerContext : DbContext
+    public class Stream_G_Context : DbContext
     {
-        public SocialManagerContext(DbContextOptions options): base(options)
+        public Stream_G_Context(DbContextOptions options): base(options)
         {
             Database.EnsureCreated();
         }
 
-        public DbSet<ApplicationUser> Users { get; set; }
+        public DbSet<User> Users { get; set; }
 
     }
 }

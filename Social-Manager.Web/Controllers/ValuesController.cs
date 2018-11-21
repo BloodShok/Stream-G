@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Social_Manager.WEB.Controllers
+namespace StreamG.WEB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

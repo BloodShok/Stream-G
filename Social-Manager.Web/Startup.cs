@@ -14,6 +14,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
+using StreamG.Services.Interfaces;
+using StreamG.Services.TwitchSerices;
 
 namespace Social_Manager.WEB
 {
@@ -44,6 +46,8 @@ namespace Social_Manager.WEB
                });
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddScoped<ITwitchUserService, TwitchUserService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
