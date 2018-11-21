@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27703.2042
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.Services", "Social-Manager.Abstraction\Stream-G.Services.csproj", "{016B0D0D-0D37-405D-8B0D-C893F0800B52}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.Services", "Stream-G.Abstraction\Stream-G.Services.csproj", "{016B0D0D-0D37-405D-8B0D-C893F0800B52}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.Core", "Social-Manager.Core\Stream-G.Core.csproj", "{0071F313-7FFE-4D62-ABC2-960560659349}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.Core", "Stream-G.Core\Stream-G.Core.csproj", "{0071F313-7FFE-4D62-ABC2-960560659349}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.Infrastructure", "Social-Manager.Infrastructure\Stream-G.Infrastructure.csproj", "{1BFE0076-BFD5-4CAF-9AD3-5FE7EDDA2FF8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.Infrastructure", "Stream-G.Infrastructure\Stream-G.Infrastructure.csproj", "{1BFE0076-BFD5-4CAF-9AD3-5FE7EDDA2FF8}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.WEB", "Social-Manager.WEB\Stream-G.WEB.csproj", "{A2728A96-FD69-4FE8-BA2F-57CC8A859432}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stream-G.WEB", "Stream-G.WEB\Stream-G.WEB.csproj", "{A2728A96-FD69-4FE8-BA2F-57CC8A859432}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Twitch.API", "..\ConsoleApp1\TwitchApi\Twitch.API.csproj", "{C5471AD2-2DE5-4D0A-B41B-ACB08E5AFA8E}"
 EndProject
