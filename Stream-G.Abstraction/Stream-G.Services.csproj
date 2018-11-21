@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Social-Manager.Core\Stream-G.Core.csproj" />
     <ProjectReference Include="..\Stream-G.DTO\Stream-G.DTO.csproj" />
   </ItemGroup>
 

@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Social-Manager.Abstraction\Stream-G.Services.csproj" />
+    <ProjectReference Include="..\Stream-G.Abstraction\Stream-G.Services.csproj" />
   </ItemGroup>
 
 </Project>
