@@ -2,7 +2,8 @@
 
 namespace Twitch.Api.Interfaces
 {
-    public class Class1
+    public interface ITwitchUserApi
     {
+        void GetUserData();
     }
 }

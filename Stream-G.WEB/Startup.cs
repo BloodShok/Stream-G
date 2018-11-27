@@ -16,7 +16,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using StreamG.Services.Interfaces;
 using StreamG.Services.TwitchSerices;
-
+using Twitch.API.Configuration;
 namespace Social_Manager.WEB
 {
     public class Startup
@@ -31,23 +31,39 @@ namespace Social_Manager.WEB
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication(options =>
-            {
-                options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
-            })
-               .AddJwtBearer(jwtOptions =>
-               {
-                   jwtOptions.Authority = $"https://login.microsoftonline.com/tfp/{Configuration["AzureAdB2C:Tenant"]}/{Configuration["AzureAdB2C:Policy"]}/v2.0/";
-                   jwtOptions.Audience = Configuration["AzureAdB2C:ClientId"];
-                   jwtOptions.Events = new JwtBearerEvents
-                   {
-                       OnAuthenticationFailed = AuthenticationFailed
-                   };
-               });
+            #region Azure
+            //services.AddAuthentication(options =>
+            //{
+            //    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+            //})
+            //   .AddJwtBearer(jwtOptions =>
+            //   {
+            //       jwtOptions.Authority = $"https://login.microsoftonline.com/tfp/{Configuration["AzureAdB2C:Tenant"]}/{Configuration["AzureAdB2C:Policy"]}/v2.0/";
+            //       jwtOptions.Audience = Configuration["AzureAdB2C:ClientId"];
+            //       jwtOptions.Events = new JwtBearerEvents
+            //       {
+            //           OnAuthenticationFailed = AuthenticationFailed
+            //       };
+            //   });
+            #endregion
+
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
 
             services.AddScoped<ITwitchUserService, TwitchUserService>();
+
+            services.ConfigurateTwitchApi(x =>
+            {
+                x.ClientId = "sad";
+                x.ClientSecret = "sad";
+                x.Scopes = new List<string>();
+            });
+            //Twitch.API.TwitchApi twitchApi = new Twitch.API.TwitchApi(o =>
+            //{
+            //    o.ClientId = "asdasd";
+            //    o.ClientSecret = "asdasd";
+            //    o.Scopes = new[] { "sad", "asd" }.ToList();
+            //});
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

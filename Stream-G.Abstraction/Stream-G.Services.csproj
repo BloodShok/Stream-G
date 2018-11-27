@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\ConsoleApp1\TwitchApi\Twitch.API.csproj" />
     <ProjectReference Include="..\Stream-G.DTO\Stream-G.DTO.csproj" />
   </ItemGroup>
 
