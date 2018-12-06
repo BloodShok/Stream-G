@@ -13,6 +13,12 @@ namespace StreamG.WEB.Controllers
     {
         public TwitchUserController()
         {
+          
+        }
+
+        [HttpPost("message")]
+        public void Post()
+        {
 
         }
     }

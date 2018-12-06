@@ -14,9 +14,14 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
-using StreamG.Services.Interfaces;
-using StreamG.Services.TwitchSerices;
 using Twitch.API.Configuration;
+using Twitch.API.Data;
+using MediatR;
+using Microsoft.AspNetCore.Http;
+using StreamG.Services.CommandHandlers.TwitchUserAuthorize;
+using StreamG.Infrastructure.TwitchNotification.Hubs;
+using StreamG.WEB.Middleware;
+
 namespace Social_Manager.WEB
 {
     public class Startup
@@ -46,29 +51,32 @@ namespace Social_Manager.WEB
             //       };
             //   });
             #endregion
-
-
+            services.AddCors();
+            services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            services.AddScoped<ITwitchUserService, TwitchUserService>();
 
             services.ConfigurateTwitchApi(x =>
             {
-                x.ClientId = "sad";
-                x.ClientSecret = "sad";
-                x.Scopes = new List<string>();
+                x.ClientId = "zelka51qk5amh7qm05a7vqtriwfv2k";
+                x.ClientSecret = "xakg0ffzovmb36vb7brazvvncjyvp2";
+                x.Scopes = new List<string> { Scope.UserRead, Scope.ChannelRead, Scope.ViewingActivityRead };
+                x.RedirectUrl = "https://localhost:44349/api/TwitchAuthorization/authorize";
             });
-            //Twitch.API.TwitchApi twitchApi = new Twitch.API.TwitchApi(o =>
-            //{
-            //    o.ClientId = "asdasd";
-            //    o.ClientSecret = "asdasd";
-            //    o.Scopes = new[] { "sad", "asd" }.ToList();
-            //});
+
+            services.AddMediatR(typeof(TwitchUserAuthorizeCommandHandler).Assembly);
+           
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseCors(builder => builder
+                                        .WithOrigins("http://localhost:4200")
+                                        .AllowAnyMethod()
+                                        .AllowAnyHeader()
+                                        .AllowCredentials());
+
+            app.UseTwitchAuthentication();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -78,18 +86,12 @@ namespace Social_Manager.WEB
                 app.UseHsts();
             }
 
-            app.UseHttpsRedirection();
-            app.UseAuthentication();
+            app.UseSignalR(route => {
+                route.MapHub<AuthorizationNotifyHub>("/authorizationnotify");
+            });
+         
             app.UseMvc();
-        }
-
-        private Task AuthenticationFailed(AuthenticationFailedContext arg)
-        {
-            // For debugging purposes only!
-            var s = $"AuthenticationFailed: {arg.Exception.Message}";
-            arg.Response.ContentLength = s.Length;
-            arg.Response.Body.Write(Encoding.UTF8.GetBytes(s), 0, s.Length);
-            return Task.FromResult(0);
+           
         }
     }
 }

@@ -14,10 +14,8 @@ import { AppRouteModule } from './routes/app-route.module';
 import { LayoutDefenitionComponent } from './_layout/layout-defenition/layout-defenition.component';
 import { NewsComponent } from './pages/news/news.component';
 import { MessagesComponent } from './pages/messages/messages.component';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import {AdalService, AdalInterceptor} from 'adal-angular4';
-import { AuthService } from './services/auth.service';
-import { AuthorizationGuard } from './guards/auth-guard';
+import { HttpClientModule } from '@angular/common/http';
+import {AdalService} from 'adal-angular4';
 
 @NgModule({
   declarations: [
@@ -39,14 +37,7 @@ import { AuthorizationGuard } from './guards/auth-guard';
     HttpClientModule
   ],
   providers: [
-    AdalService,
-     AuthService,
-     AuthorizationGuard,
-     {
-       provide: HTTP_INTERCEPTORS,
-       useClass: AdalInterceptor,
-       multi: true
-     }
+    AdalService
   ],
   bootstrap: [AppComponent]
 })
