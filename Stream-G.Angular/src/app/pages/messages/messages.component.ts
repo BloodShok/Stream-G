@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -17,7 +17,7 @@ export class MessagesComponent implements OnInit {
   twitchWindow: Window;
   private _hubConnection = new  HubConnectionBuilder().withUrl('https://localhost:5001/authorizationnotify').build();
   constructor(private http: HttpClient) { }
-  user_token: string = "asdasd";
+  user_token: string;
   ngOnInit() {
     this._hubConnection.start();
 
@@ -39,7 +39,8 @@ export class MessagesComponent implements OnInit {
 
    sendToServerMessage(token: string): Observable<any> {
      console.log(token);
-     return this.http.post<any>('api/TwitchUser/message', {data: token});
+     tokenHeader = new HttpHeaders();
+     return this.http.post<any>('api/TwitchUser/message', {data: token},{headers:});
    }
 }
 
