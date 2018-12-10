@@ -2458,11 +2458,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.Services\\Stream-G.Services.csproj",
+      "projectUniqueName": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.Abstraction\\Stream-G.Services.csproj",
       "projectName": "Stream-G.Services",
-      "projectPath": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.Services\\Stream-G.Services.csproj",
+      "projectPath": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.Abstraction\\Stream-G.Services.csproj",
       "packagesPath": "C:\\Users\\ivan.palii\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.Services\\obj\\",
+      "outputPath": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.Abstraction\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

@@ -17,9 +17,9 @@ C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\bin\Debug\netcoreapp2.1\Stream-G.Core.runtimeconfig.dev.json
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\bin\Debug\netcoreapp2.1\Stream-G.Core.dll
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\bin\Debug\netcoreapp2.1\Stream-G.Core.pdb
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.csprojAssemblyReference.cache
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.csproj.CoreCompileInputs.cache
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.AssemblyInfoInputs.cache
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.AssemblyInfo.cs
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.dll
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Core\obj\Debug\netcoreapp2.1\Stream-G.Core.csprojAssemblyReference.cache
