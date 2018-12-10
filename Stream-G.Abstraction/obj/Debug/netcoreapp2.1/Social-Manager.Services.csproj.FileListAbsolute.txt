@@ -1,0 +1,8 @@
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\bin\Debug\netcoreapp2.1\Social-Manager.Services.deps.json
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\bin\Debug\netcoreapp2.1\Social-Manager.Services.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\bin\Debug\netcoreapp2.1\Social-Manager.Services.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Services.csproj.CoreCompileInputs.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Services.AssemblyInfoInputs.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Services.AssemblyInfo.cs
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Services.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Services.pdb

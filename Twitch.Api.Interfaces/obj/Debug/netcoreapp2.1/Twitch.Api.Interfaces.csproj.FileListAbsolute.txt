@@ -1,0 +1,12 @@
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\bin\Debug\netcoreapp2.1\Twitch.Api.Interfaces.deps.json
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\bin\Debug\netcoreapp2.1\Twitch.Api.Interfaces.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\bin\Debug\netcoreapp2.1\Twitch.Api.Interfaces.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.csproj.CoreCompileInputs.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.AssemblyInfoInputs.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.AssemblyInfo.cs
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.csprojAssemblyReference.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\bin\Debug\netcoreapp2.1\Twitch.API.Data.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\bin\Debug\netcoreapp2.1\Twitch.API.Data.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Twitch.Api.Interfaces\obj\Debug\netcoreapp2.1\Twitch.Api.Interfaces.csproj.CopyComplete

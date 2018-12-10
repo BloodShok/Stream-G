@@ -1,0 +1,9 @@
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\bin\Debug\netcoreapp2.1\Stream-G.DTO.deps.json
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\bin\Debug\netcoreapp2.1\Stream-G.DTO.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\bin\Debug\netcoreapp2.1\Stream-G.DTO.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\obj\Debug\netcoreapp2.1\Stream-G.DTO.csprojAssemblyReference.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\obj\Debug\netcoreapp2.1\Stream-G.DTO.csproj.CoreCompileInputs.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\obj\Debug\netcoreapp2.1\Stream-G.DTO.AssemblyInfoInputs.cache
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\obj\Debug\netcoreapp2.1\Stream-G.DTO.AssemblyInfo.cs
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\obj\Debug\netcoreapp2.1\Stream-G.DTO.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.DTO\obj\Debug\netcoreapp2.1\Stream-G.DTO.pdb
