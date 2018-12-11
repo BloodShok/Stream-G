@@ -20,7 +20,6 @@ using MediatR;
 using Microsoft.AspNetCore.Http;
 using StreamG.Services.CommandHandlers.TwitchUserAuthorize;
 using StreamG.Infrastructure.TwitchNotification.Hubs;
-using StreamG.WEB.Middleware;
 
 namespace Social_Manager.WEB
 {
@@ -77,6 +76,7 @@ namespace Social_Manager.WEB
                                         .AllowCredentials());
 
             app.UseTwitchAuthentication();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();

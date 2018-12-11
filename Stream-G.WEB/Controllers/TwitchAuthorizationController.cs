@@ -28,9 +28,9 @@ namespace StreamG.WEB.Controllers
         [HttpGet("authorize")]
         public async Task Authorize(string code, string state)
         {
-            var result = await _mediator.Send(new AuthorizeTwitchUserCommand { code = code });
+            var result = await _mediator.Send(new AuthorizeTwitchUserCommand { Code = code });
 
-            await _hubContext.Clients.All.AuthenticationMessage(result.AccessToken, state);
+            await _hubContext.Clients.All.AuthenticationMessage(result);
         }
     }
 }

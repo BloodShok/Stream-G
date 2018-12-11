@@ -15,3 +15,6 @@ C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Infrastructure\obj\Debug\netcoreapp2.1\Stream-G.Infrastructure.AssemblyInfo.cs
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Infrastructure\obj\Debug\netcoreapp2.1\Stream-G.Infrastructure.dll
 C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Infrastructure\obj\Debug\netcoreapp2.1\Stream-G.Infrastructure.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Infrastructure\bin\Debug\netcoreapp2.1\Stream-G.DTO.dll
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Infrastructure\bin\Debug\netcoreapp2.1\Stream-G.DTO.pdb
+C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Stream-G.Infrastructure\obj\Debug\netcoreapp2.1\Stream-G.Infrastructure.csproj.CopyComplete

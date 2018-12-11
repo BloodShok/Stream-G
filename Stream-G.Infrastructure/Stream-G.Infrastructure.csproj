@@ -9,4 +9,8 @@
     <PackageReference Include="Microsoft.AspNetCore.SignalR" Version="1.0.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Stream-G.DTO\Stream-G.DTO.csproj" />
+  </ItemGroup>
+
 </Project>

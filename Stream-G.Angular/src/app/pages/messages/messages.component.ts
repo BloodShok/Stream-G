@@ -19,11 +19,10 @@ export class MessagesComponent implements OnInit {
   constructor(private http: HttpClient) { }
   user_token: string;
   ngOnInit() {
-    this._hubConnection.start();
 
-    this._hubConnection.on(
-      'AuthentificationMessage',
-     (token: string, state: string) => { console.log(token); console.log(state); this.user_token = token; this.twitchWindow.close(); });
+    this._hubConnection.start();
+    this._hubConnection.on('AuthenticationMessage',(code) => console.log(code));
+    
   }
 
    authorizeTwitch() {
@@ -31,16 +30,12 @@ export class MessagesComponent implements OnInit {
    }
 
 
-   getUserTwitch() {
-     this.sendToServerMessage(this.user_token).subscribe(x => {
-        console.log(x);
-     });
-   }
+   
 
    sendToServerMessage(token: string): Observable<any> {
      console.log(token);
-     tokenHeader = new HttpHeaders();
-     return this.http.post<any>('api/TwitchUser/message', {data: token},{headers:});
+     const tokenHeader = new HttpHeaders();
+     return this.http.post<any>('api/TwitchUser/message', {data: token}, {headers: tokenHeader});
    }
 }
 

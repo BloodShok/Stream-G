@@ -5,12 +5,13 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
+using StreamG.DTO;
 using Twitch.Api.Abstraction;
 using Twitch.API.Data.Token;
 
 namespace StreamG.Services.CommandHandlers.TwitchUserAuthorize
 {
-    public class TwitchUserAuthorizeCommandHandler : IRequestHandler<AuthorizeTwitchUserCommand, Token>
+    public class TwitchUserAuthorizeCommandHandler : IRequestHandler<AuthorizeTwitchUserCommand, TwitchAuthorizeInfoDto>
     {
         private readonly ITwitchAuthorizing _twitchAuthorizing;
         private readonly ITwitchUserApi _twitchUserApi;
@@ -19,11 +20,20 @@ namespace StreamG.Services.CommandHandlers.TwitchUserAuthorize
             _twitchAuthorizing = twitchAuthorizing;
             _twitchUserApi = twitchUserApi;
         }
-        public Task<Token> Handle(AuthorizeTwitchUserCommand request, CancellationToken cancellationToken)
+        public Task<TwitchAuthorizeInfoDto> Handle(AuthorizeTwitchUserCommand request, CancellationToken cancellationToken)
         {
-            var token = _twitchAuthorizing.GetAccessToken(request.code);
+            var token = _twitchAuthorizing.GetAccessToken(request.Code);
             var user = _twitchUserApi.GetCurrentUser();
-            return Task.FromResult(token);
+
+            var authorizeInfoDto = new TwitchAuthorizeInfoDto()
+            {
+                Id = user.Id,
+                DisplayName = user.DisplayName,
+                Email = "sad",
+                AccessToken = token.AccessToken
+            };
+
+            return Task.FromResult(authorizeInfoDto);
         }
     }
 }

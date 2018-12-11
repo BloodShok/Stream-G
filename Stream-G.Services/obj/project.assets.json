@@ -810,7 +810,8 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v2.1",
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR": "1.0.4"
+          "Microsoft.AspNetCore.SignalR": "1.0.4",
+          "Stream-G.DTO": "1.0.0"
         },
         "compile": {
           "bin/placeholder/Stream-G.Infrastructure.dll": {}

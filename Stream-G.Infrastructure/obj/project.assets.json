@@ -765,6 +765,16 @@
         "compile": {
           "ref/netstandard1.3/System.Threading.Tasks.dll": {}
         }
+      },
+      "Stream-G.DTO/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Stream-G.DTO.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Stream-G.DTO.dll": {}
+        }
       }
     }
   },
@@ -2275,12 +2285,18 @@
         "system.threading.tasks.4.3.0.nupkg.sha512",
         "system.threading.tasks.nuspec"
       ]
+    },
+    "Stream-G.DTO/1.0.0": {
+      "type": "project",
+      "path": "../Stream-G.DTO/Stream-G.DTO.csproj",
+      "msbuildProject": "../Stream-G.DTO/Stream-G.DTO.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.1": [
       "Microsoft.AspNetCore.SignalR >= 1.0.4",
-      "Microsoft.NETCore.App >= 2.1.0"
+      "Microsoft.NETCore.App >= 2.1.0",
+      "Stream-G.DTO >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -2312,7 +2328,11 @@
       },
       "frameworks": {
         "netcoreapp2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.DTO\\Stream-G.DTO.csproj": {
+              "projectPath": "C:\\Users\\ivan.palii\\Documents\\Visual Studio 2017\\Projects\\Social-Manager\\Stream-G.DTO\\Stream-G.DTO.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

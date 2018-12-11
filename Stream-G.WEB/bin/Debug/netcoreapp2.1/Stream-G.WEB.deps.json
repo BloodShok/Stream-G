@@ -724,7 +724,8 @@
       },
       "Stream-G.Infrastructure/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.SignalR": "1.0.4"
+          "Microsoft.AspNetCore.SignalR": "1.0.4",
+          "Stream-G.DTO": "1.0.0"
         },
         "runtime": {
           "Stream-G.Infrastructure.dll": {}
