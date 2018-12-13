@@ -69,6 +69,12 @@ namespace Social_Manager.WEB
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseMvc(routes =>
+            {
+                routes.MapRoute(
+                    name: "home",
+                    template: "api/{controller=posts}/{action=Get}/{id?}");
+            });
             app.UseCors(builder => builder
                                         .WithOrigins("http://localhost:4200")
                                         .AllowAnyMethod()
@@ -90,8 +96,7 @@ namespace Social_Manager.WEB
                 route.MapHub<AuthorizationNotifyHub>("/authorizationnotify");
             });
          
-            app.UseMvc();
-           
+            
         }
     }
 }

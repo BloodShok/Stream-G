@@ -2,6 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { HubConnection, HubConnectionBuilder } from '@aspnet/signalr';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { TwitchAuthorizationService } from 'src/app/services/twitch-authorization.service';
+import { UserAuthentificationData } from 'src/app/models/UserAuthentificationData';
+
 
 @Component({
   selector: 'app-messages',
@@ -14,21 +17,26 @@ export class MessagesComponent implements OnInit {
           '&redirect_uri=https://localhost:5001/api/TwitchAuthorization/authorize' +
           '&scope=viewing_activity_read&state=' + location.href;
 
-  twitchWindow: Window;
-  private _hubConnection = new  HubConnectionBuilder().withUrl('https://localhost:5001/authorizationnotify').build();
-  constructor(private http: HttpClient) { }
-  user_token: string;
-  ngOnInit() {
 
-    this._hubConnection.start();
-    this._hubConnection.on('AuthenticationMessage',(code) => console.log(code));
-    
+
+  constructor(private http: HttpClient, private twAithorize: TwitchAuthorizationService) { }
+  user_token: string;
+user: UserAuthentificationData;
+
+  ngOnInit() {
+    this.twAithorize.startListeningTwitchAuthorize();
+    this.user = this.twAithorize.getUser();
+
+    this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
+      this.user = x;
+    });
   }
 
    authorizeTwitch() {
-    this.twitchWindow = window.open(this.value, '_blank', 'width=500, height=400');
-   }
+      this.twAithorize.sendAuthorizeRequest();
 
+     }
+    
 
    
 
@@ -37,14 +45,5 @@ export class MessagesComponent implements OnInit {
      const tokenHeader = new HttpHeaders();
      return this.http.post<any>('api/TwitchUser/message', {data: token}, {headers: tokenHeader});
    }
-}
-
-class Tok {
-  /**
-   *
-   */
-  constructor(token: string) {
-    this.token = token;
-  }
- token: string;
+   
 }

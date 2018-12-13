@@ -1,10 +1,6 @@
 export class UserAuthentificationData {
-    constructor(parameters) {
-        
-    }
-
     id: number;
-    name: string;
-    bearer_token: string;
-
+    displayName: string;
+    accessToken: string;
+    email: string;
 }
