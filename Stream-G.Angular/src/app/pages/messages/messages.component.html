@@ -6,4 +6,6 @@
 <div *ngIf='user != null' style="margin-top: 30px; border: 1px solid red;">
   Hi {{user.displayName}}
   You Id is {{user.id}}
+
+  <p>{{user| json}}</p>
 </div>
