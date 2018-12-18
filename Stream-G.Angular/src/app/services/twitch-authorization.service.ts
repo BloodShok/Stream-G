@@ -25,7 +25,8 @@ export class TwitchAuthorizationService {
 
   startListeningTwitchAuthorize(): void {
     this._hubConnection.start();
-    this._hubConnection.on('AuthenticationMessage', (user) => this.userEmitter.emit(user));
+    this._hubConnection.on('AuthenticationMessage',
+     (user) => {this.userEmitter.emit(user); localStorage.setItem('twToken', user.accessToken); });
   }
   closeWindow(): void {
     this.twitchWindow.close();

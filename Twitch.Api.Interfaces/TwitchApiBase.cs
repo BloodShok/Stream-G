@@ -2,14 +2,16 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
+using Newtonsoft.Json;
 using Twitch.API.Data;
+using Twitch.API.Data.Token;
 
 namespace Twitch.Api.Abstraction
 {
     public abstract class TwitchApiBase
     {
-        public static Options Options;
-        public RestClient RestClient;
+        protected static Options Options;
+        public static Token Token { get; protected set; }
 
         public static void SetConfiguration(Action<Options> func)
         {
@@ -17,9 +19,13 @@ namespace Twitch.Api.Abstraction
             func.Invoke(Options);
         }
 
-        public static void SetBearerToken(string token)
+        public T Execute<T>(Method restMethod, RestClient restClient) where T : new()
         {
-            Options.UserBearer = token;
+            var request = new RestRequest(restMethod);
+
+            var response = restClient.Execute(request);
+
+            return JsonConvert.DeserializeObject<T>(response.Content);
         }
     }
 }

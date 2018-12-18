@@ -53,8 +53,8 @@ namespace Social_Manager.WEB
             services.AddCors();
             services.AddSignalR();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
-
-            services.ConfigurateTwitchApi(x =>
+           
+            services.AddTwitchConfiguration(x =>
             {
                 x.ClientId = "zelka51qk5amh7qm05a7vqtriwfv2k";
                 x.ClientSecret = "xakg0ffzovmb36vb7brazvvncjyvp2";
@@ -92,6 +92,7 @@ namespace Social_Manager.WEB
                 app.UseHsts();
             }
 
+            app.UseAuthentication();
             app.UseSignalR(route => {
                 route.MapHub<AuthorizationNotifyHub>("/authorizationnotify");
             });

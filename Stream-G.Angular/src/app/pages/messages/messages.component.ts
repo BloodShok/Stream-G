@@ -21,7 +21,7 @@ export class MessagesComponent implements OnInit {
 
   constructor(private http: HttpClient, private twAithorize: TwitchAuthorizationService) { }
   user_token: string;
-user: UserAuthentificationData;
+  user: UserAuthentificationData;
 
   ngOnInit() {
     this.twAithorize.startListeningTwitchAuthorize();
@@ -36,9 +36,6 @@ user: UserAuthentificationData;
       this.twAithorize.sendAuthorizeRequest();
 
      }
-    
-
-   
 
    sendToServerMessage(token: string): Observable<any> {
      console.log(token);

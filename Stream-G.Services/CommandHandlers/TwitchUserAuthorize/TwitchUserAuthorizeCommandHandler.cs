@@ -22,15 +22,14 @@ namespace StreamG.Services.CommandHandlers.TwitchUserAuthorize
         }
         public Task<TwitchAuthorizeInfoDto> Handle(AuthorizeTwitchUserCommand request, CancellationToken cancellationToken)
         {
-            var token = _twitchAuthorizing.GetAccessToken(request.Code);
+            _twitchAuthorizing.Authorize(request.Code);
             var user = _twitchUserApi.GetCurrentUser();
 
             var authorizeInfoDto = new TwitchAuthorizeInfoDto()
             {
                 Id = user.Id,
                 DisplayName = user.DisplayName,
-                Email = "sad",
-                AccessToken = token.AccessToken
+                Email = "sad"
             };
 
             return Task.FromResult(authorizeInfoDto);

@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.SignalR;
 using StreamG.Infrastructure.TwitchNotification.Hubs;
 using StreamG.Infrastructure.TwitchNotification.Interfaces;
 using StreamG.Services.Commands;
+using Twitch.Api.Abstraction;
 using Twitch.API;
 
 namespace StreamG.WEB.Controllers
@@ -19,6 +20,7 @@ namespace StreamG.WEB.Controllers
     {
         private readonly IMediator _mediator;
         private readonly IHubContext<AuthorizationNotifyHub, ITwitchAuthenticationClient> _hubContext;
+
         public TwitchAuthorizationController(IMediator mediator, IHubContext<AuthorizationNotifyHub, ITwitchAuthenticationClient> hubContext)
         {
             _mediator = mediator;
@@ -29,7 +31,7 @@ namespace StreamG.WEB.Controllers
         public async Task Authorize(string code, string state)
         {
             var result = await _mediator.Send(new AuthorizeTwitchUserCommand { Code = code  });
-
+            
             await _hubContext.Clients.All.AuthenticationMessage(result);
         }
     }
