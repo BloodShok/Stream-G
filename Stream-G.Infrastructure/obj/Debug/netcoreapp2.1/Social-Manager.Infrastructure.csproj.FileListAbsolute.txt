@@ -1,9 +1,0 @@
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\bin\Debug\netcoreapp2.1\Social-Manager.Infrastructure.deps.json
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\bin\Debug\netcoreapp2.1\Social-Manager.Infrastructure.dll
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\bin\Debug\netcoreapp2.1\Social-Manager.Infrastructure.pdb
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\obj\Debug\netcoreapp2.1\Social-Manager.Infrastructure.csprojAssemblyReference.cache
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\obj\Debug\netcoreapp2.1\Social-Manager.Infrastructure.csproj.CoreCompileInputs.cache
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\obj\Debug\netcoreapp2.1\Social-Manager.Infrastructure.AssemblyInfoInputs.cache
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\obj\Debug\netcoreapp2.1\Social-Manager.Infrastructure.AssemblyInfo.cs
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\obj\Debug\netcoreapp2.1\Social-Manager.Infrastructure.dll
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Infrastructure\obj\Debug\netcoreapp2.1\Social-Manager.Infrastructure.pdb

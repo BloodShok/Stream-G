@@ -1,8 +1,0 @@
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\bin\Debug\netcoreapp2.1\Social-Manager.Abstraction.deps.json
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\bin\Debug\netcoreapp2.1\Social-Manager.Abstraction.dll
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\bin\Debug\netcoreapp2.1\Social-Manager.Abstraction.pdb
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Abstraction.csproj.CoreCompileInputs.cache
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Abstraction.AssemblyInfoInputs.cache
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Abstraction.AssemblyInfo.cs
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Abstraction.dll
-C:\Users\ivan.palii\Documents\Visual Studio 2017\Projects\Social-Manager\Social-Manager.Abstraction\obj\Debug\netcoreapp2.1\Social-Manager.Abstraction.pdb
