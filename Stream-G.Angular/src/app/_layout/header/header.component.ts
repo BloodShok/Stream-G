@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { TwitchAuthorizationService } from 'src/app/services/twitch-authorization.service';
 import { UserAuthentificationData } from 'src/app/models/UserAuthentificationData';
 import { DomSanitizer } from '@angular/platform-browser';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -16,15 +17,19 @@ export class HeaderComponent implements OnInit {
   currentWindowUserSetings: string;
   trustedUrl: any;
   usl: string;
-  constructor(private twAithorize: TwitchAuthorizationService, private sanitizer: DomSanitizer) { }
+  constructor(private twAithorize: TwitchAuthorizationService, private sanitizer: DomSanitizer, private route: ActivatedRoute) { }
   user: UserAuthentificationData;
   ngOnInit() {
-    this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
-      this.user = x;
-      this.trustedUrl = this.sanitizer.bypassSecurityTrustUrl(x.profileImageUrl);
-      this.usl = `url(${this.user.profileImageUrl})`;
-      console.log(this.usl);
-    });
+    // this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
+    //   this.user = x;
+    //   this.trustedUrl = this.sanitizer.bypassSecurityTrustUrl(x.profileImageUrl);
+    //   this.usl = `url(${this.user.profileImageUrl})`;
+    //   console.log(this.usl);
+
+      this.route.data.subscribe(x => { console.log(x['code']); });
+      this.route.data.subscribe(x => { console.log('----------------' + x + '--------------------'); });
+      this.route.data.subscribe(x => console.log(x));
+    //});
   }
 
   selectdAppSetings() {

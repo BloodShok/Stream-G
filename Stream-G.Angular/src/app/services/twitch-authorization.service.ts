@@ -12,7 +12,7 @@ export class TwitchAuthorizationService {
 
   readonly value: string = 'https://id.twitch.tv/oauth2/authorize?response_type=code' +
   '&client_id=zelka51qk5amh7qm05a7vqtriwfv2k' +
-  '&redirect_uri=https://localhost:5001/api/TwitchAuthorization/authorize' +
+  '&redirect_uri=http://localhost:4200/messages' +
   '&scope=viewing_activity_read&state=' + location.href;
 
   private _hubConnection = new  HubConnectionBuilder().withUrl('https://localhost:5001/authorizationnotify').build();
@@ -20,7 +20,7 @@ export class TwitchAuthorizationService {
   user: UserAuthentificationData;
   userEmitter = new EventEmitter<UserAuthentificationData>();
   sendAuthorizeRequest(): void {
-    this.twitchWindow = window.open(this.value, '_blank', 'width=500, height=400');
+    window.open(this.value);
   }
 
   startListeningTwitchAuthorize(): void {

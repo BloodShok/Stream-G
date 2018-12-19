@@ -1,10 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using System.Net;
+using System.Net.Http;
 using Microsoft.AspNetCore.Mvc;
-
+using System.Web.Http;
 namespace StreamG.WEB.Controllers
 {
     [Route("api/[controller]")]
@@ -17,9 +15,9 @@ namespace StreamG.WEB.Controllers
         }
 
         [HttpPost("message")]
-        public void Post()
+        public IActionResult Post()
         {
-
+            return Redirect("https://xxx.xxxx.com");
         }
     }
 }

@@ -4,6 +4,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { TwitchAuthorizationService } from 'src/app/services/twitch-authorization.service';
 import { UserAuthentificationData } from 'src/app/models/UserAuthentificationData';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -19,28 +20,36 @@ export class MessagesComponent implements OnInit {
 
 
 
-  constructor(private http: HttpClient, private twAithorize: TwitchAuthorizationService) { }
+  constructor(private http: HttpClient, private twAithorize: TwitchAuthorizationService, private route: ActivatedRoute) { }
   user_token: string;
   user: UserAuthentificationData;
 
   ngOnInit() {
-    this.twAithorize.startListeningTwitchAuthorize();
-    this.user = this.twAithorize.getUser();
+    // this.twAithorize.startListeningTwitchAuthorize();
+    // this.user = this.twAithorize.getUser();
 
-    this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
-      this.user = x; this.twAithorize.closeWindow();
-    });
+    // this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
+    //   this.user = x; this.twAithorize.closeWindow();
+    // });
+    this.route.data.subscribe(x => { console.log(x['code']); });
+    this.route.data.subscribe(x => { console.log('----------------' + x + '--------------------'); });
+    this.route.data.subscribe(x => console.log(this.route.snapshot.params));
+    
   }
 
    authorizeTwitch() {
       this.twAithorize.sendAuthorizeRequest();
 
      }
+     send() {
+      this.sendToServerMessage("asdas").subscribe(x => console.log("Hi"));
+     }
+
 
    sendToServerMessage(token: string): Observable<any> {
      console.log(token);
      const tokenHeader = new HttpHeaders();
      return this.http.post<any>('api/TwitchUser/message', {data: token}, {headers: tokenHeader});
    }
-   
+
 }
