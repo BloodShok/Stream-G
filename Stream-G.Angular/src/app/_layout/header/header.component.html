@@ -1,0 +1,20 @@
+<div class="header thema__FB" >
+    <div class="header__app__name__container">
+        <div class="app__name">Social Manager</div>
+    </div>
+    
+    <div class="user__info__container" #usertarget (click)="selectdUserSetings(usertarget)" (clickOutside)="unSelectedUserSetings($event)">
+        <div class="user__name">
+            <span class="user__name__text">BloodShok</span>
+            <span class="user__login__snetwork">-------------</span>
+        </div>
+            <div *ngIf="user != null" class="user__image" [ngStyle]="{'background-image': usl}" style="background-size: 40px 40px">
+        </div>  
+    </div>
+</div>
+
+<div style="float: right;">
+    <app-user-setings *ngIf="isSelectedUserSetings"></app-user-setings>
+</div>
+
+
