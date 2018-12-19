@@ -9,5 +9,6 @@ namespace Twitch.Api.Abstraction
     public interface ITwitchAuthorizing
     {
         void Authorize(string code);
+        Token GetToken();
     }
 }

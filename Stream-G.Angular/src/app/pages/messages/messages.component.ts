@@ -28,7 +28,7 @@ export class MessagesComponent implements OnInit {
     this.user = this.twAithorize.getUser();
 
     this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
-      this.user = x;
+      this.user = x; this.twAithorize.closeWindow();
     });
   }
 

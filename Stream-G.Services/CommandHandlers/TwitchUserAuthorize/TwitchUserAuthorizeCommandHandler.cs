@@ -24,12 +24,13 @@ namespace StreamG.Services.CommandHandlers.TwitchUserAuthorize
         {
             _twitchAuthorizing.Authorize(request.Code);
             var user = _twitchUserApi.GetCurrentUser();
-
+ 
             var authorizeInfoDto = new TwitchAuthorizeInfoDto()
             {
                 Id = user.Id,
                 DisplayName = user.DisplayName,
-                Email = "sad"
+                AccessCode = request.Code,
+                ProfileImageUrl = user.ProfileImageUrl
             };
 
             return Task.FromResult(authorizeInfoDto);
