@@ -26,9 +26,8 @@ export class HeaderComponent implements OnInit {
     //   this.usl = `url(${this.user.profileImageUrl})`;
     //   console.log(this.usl);
 
-      this.route.data.subscribe(x => { console.log(x['code']); });
-      this.route.data.subscribe(x => { console.log('----------------' + x + '--------------------'); });
-      this.route.data.subscribe(x => console.log(x));
+      // this.route.data.subscribe(x => { console.log(x['code']); });
+      // this.route.data.subscribe(x => { console.log('----------------' + x + '--------------------'); });
     //});
   }
 

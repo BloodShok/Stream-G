@@ -31,10 +31,10 @@ export class MessagesComponent implements OnInit {
     // this.twAithorize.userEmitter.subscribe((x: UserAuthentificationData) => {
     //   this.user = x; this.twAithorize.closeWindow();
     // });
-    this.route.data.subscribe(x => { console.log(x['code']); });
-    this.route.data.subscribe(x => { console.log('----------------' + x + '--------------------'); });
-    this.route.data.subscribe(x => console.log(this.route.snapshot.params));
-    
+    // this.route.data.subscribe(x => { console.log(x['code']); });
+    // this.route.data.subscribe(x => { console.log('----------------' + x + '--------------------'); });
+    // this.route.data.subscribe(x => console.log(this.route.snapshot.params));
+
   }
 
    authorizeTwitch() {
@@ -42,7 +42,7 @@ export class MessagesComponent implements OnInit {
 
      }
      send() {
-      this.sendToServerMessage("asdas").subscribe(x => console.log("Hi"));
+      console.log(window.location);
      }
 
 

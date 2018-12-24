@@ -15,10 +15,11 @@ using Microsoft.Extensions.Options;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using System.Text;
 using Twitch.API.Configuration;
-using Twitch.API.Data;
 using MediatR;
 using Microsoft.AspNetCore.Http;
+
 using StreamG.Services.CommandHandlers.TwitchUserAuthorize;
+using Twitch.API.Data;
 using StreamG.Infrastructure.TwitchNotification.Hubs;
 
 namespace Social_Manager.WEB

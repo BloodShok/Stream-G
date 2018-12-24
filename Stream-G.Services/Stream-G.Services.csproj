@@ -10,12 +10,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ConsoleApp1\TwitchApi\Twitch.API.csproj" />
-    <ProjectReference Include="..\Stream-G.DTO\Stream-G.DTO.csproj" />
+    <Folder Include="Interfaces\" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Interfaces\" />
+    <ProjectReference Include="..\Stream-G.DTO\Stream-G.DTO.csproj" />
+    <ProjectReference Include="..\Twitch\Twitch.Api.Interfaces\Twitch.Api.Abstraction.csproj" />
   </ItemGroup>
 
 </Project>

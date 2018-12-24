@@ -21,8 +21,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Stream-G.Services\Stream-G.Services.csproj" />
+    <ProjectReference Include="..\Stream-G.Core\Stream-G.Core.csproj" />
+    <ProjectReference Include="..\Stream-G.DTO\Stream-G.DTO.csproj" />
     <ProjectReference Include="..\Stream-G.Infrastructure\Stream-G.Infrastructure.csproj" />
+    <ProjectReference Include="..\Stream-G.Services\Stream-G.Services.csproj" />
+    <ProjectReference Include="..\Twitch\TwitchApi\Twitch.API.csproj" />
   </ItemGroup>
 
 </Project>

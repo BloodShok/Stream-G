@@ -2,6 +2,7 @@
   <!-- <a href="https://id.twitch.tv/oauth2/authorize?response_type=code&client_id=zelka51qk5amh7qm05a7vqtriwfv2k&redirect_uri=https://localhost:44349/api/TwitchAuthorization/authorize&scope=viewing_activity_read&state=http://localhost:4200/messages">Twistch</a> -->
 </p>
 <button (click)='authorizeTwitch()'>Twitch</button>
+<button (click)='send()'>Send</button>
 
 <div *ngIf='user != null' style="margin-top: 30px; border: 1px solid red;">
   Hi {{user.displayName}}

@@ -6,9 +6,9 @@ using System.Text;
 
 namespace StreamG.Core.DataBaseConfig
 {
-    public class Stream_G_Context : DbContext
+    public class StreamGContext : DbContext
     {
-        public Stream_G_Context(DbContextOptions options): base(options)
+        public StreamGContext(DbContextOptions options): base(options)
         {
             Database.EnsureCreated();
         }

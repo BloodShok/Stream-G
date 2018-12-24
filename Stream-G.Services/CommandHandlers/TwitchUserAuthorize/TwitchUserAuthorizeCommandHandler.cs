@@ -7,7 +7,6 @@ using System.Threading;
 using System.Threading.Tasks;
 using StreamG.DTO;
 using Twitch.Api.Abstraction;
-using Twitch.API.Data.Token;
 
 namespace StreamG.Services.CommandHandlers.TwitchUserAuthorize
 {
